@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مخبز السنبلة</title>
+<meta name="description" content="مخبز العيش الفينو و المخبوزات">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf6ee;
+    --surface: #ffffff;
+    --text: #3b2a1a;
+    --muted: #7a6450;
+    --accent: #c8862a;
+    --accent-soft: #f3e3c7;
+    --border: #ecdcc2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1f1812;
+      --surface: #2a211a;
+      --text: #f5ead9;
+      --muted: #c9b59c;
+      --accent: #e0a24a;
+      --accent-soft: #3a2c1e;
+      --border: #3d3024;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1f1812;
+    --surface: #2a211a;
+    --text: #f5ead9;
+    --muted: #c9b59c;
+    --accent: #e0a24a;
+    --accent-soft: #3a2c1e;
+    --border: #3d3024;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  header {
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--border);
+    padding: 56px 0 48px;
+    text-align: center;
+  }
+  .mark { font-size: 44px; line-height: 1; }
+  h1 {
+    margin: 12px 0 8px;
+    font-size: clamp(34px, 9vw, 56px);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .tagline {
+    margin: 0;
+    font-size: clamp(18px, 4.5vw, 22px);
+    color: var(--muted);
+  }
+
+  section { padding: 40px 0 8px; }
+  h2 {
+    margin: 0 0 20px;
+    font-size: 26px;
+    font-weight: 800;
+  }
+  h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 6px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 640px) {
+    .products { grid-template-columns: repeat(3, 1fr); }
+  }
+  .products li {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .price {
+    margin: 16px 0 0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    font-size: 20px;
+    text-align: center;
+  }
+  .price strong { color: var(--accent); }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .info { grid-template-columns: repeat(3, 1fr); }
+  }
+  .info > div {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .info h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .info p {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+  .tel {
+    color: inherit;
+    text-decoration: none;
+  }
+  .whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #1f9d55;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .whatsapp:hover { background: #188547; }
+
+  footer {
+    padding: 40px 0 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="mark" aria-hidden="true">🌾</div>
+    <h1>مخبز السنبلة</h1>
+    <p class="tagline">مخبز العيش الفينو و المخبوزات</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="products-title">
+    <h2 id="products-title">منتجاتنا</h2>
+    <ul class="products">
+      <li>عيش فينو</li>
+      <li>عيش بلدي</li>
+      <li>كرواسون</li>
+    </ul>
+    <p class="price">الأسعار من <strong>10</strong> لـ <strong>50</strong> ج</p>
+  </section>
+
+  <section aria-labelledby="visit-title">
+    <h2 id="visit-title">المواعيد والعنوان والتواصل</h2>
+    <div class="info">
+      <div>
+        <h3>المواعيد</h3>
+        <p>من 7 لـ 7</p>
+      </div>
+      <div>
+        <h3>العنوان</h3>
+        <p>بورسعيد – حي الشرق</p>
+      </div>
+      <div>
+        <h3>رقم الموبايل</h3>
+        <div class="contact">
+          <p><a class="tel" href="tel:01050505050" dir="ltr">01050505050</a></p>
+          <a class="whatsapp" href="https://wa.me/201050505050" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.3 4.1c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.1-.7.2l-.9 1.1c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.5Z"/></svg>
+            واتساب
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">مخبز السنبلة</div>
+</footer>
+
+</body>
+</html>
